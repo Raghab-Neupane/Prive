@@ -1,17 +1,14 @@
 package main
 
 import (
+	"Prive/internal/api"
+
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	r := gin.Default()
 
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "Prive Backend Running",
-		})
-	})
-
+	r.POST("/upload", api.UploadHandler)
 	r.Run(":8080")
 }
