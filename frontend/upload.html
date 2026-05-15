@@ -9,11 +9,9 @@
 
 <body>
     <div class="upload">
-        <form class="event">
 
-            <input type="file" name="file" id="fileInput">
-            <button onclick="uploadFile(event)">Upload</button>
-        </form>
+        <input type="file" name="file" id="fileInput">
+        <button onclick="uploadFile(event)">Upload</button>
     </div>
 
     <script>
@@ -30,7 +28,8 @@
                 body: formData
             });
 
-            const data = await response.json();
+            const data = await response.text();
+            console.log('response received');
             console.log(data);
         }
     </script>
