@@ -1,0 +1,17 @@
+# Uploaded files
+uploads/
+
+# Generated encrypted files
+*.encrypted
+
+# Chunk files
+chunks/
+
+# Reconstructed files
+reconstructed/
+
+# Temporary files
+temp/
+
+# Environment variables
+.env
