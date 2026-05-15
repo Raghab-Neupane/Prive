@@ -9,13 +9,18 @@
 
 <body>
     <div class="upload">
+        <form class="event">
 
-        <input type="file" name="file" id="fileInput">
-        <button onclick="uploadFile()">Upload</button>
+            <input type="file" name="file" id="fileInput">
+            <button onclick="uploadFile(event)">Upload</button>
+        </form>
     </div>
 
     <script>
-        async function uploadFile() {
+        async function uploadFile(event) {
+
+            event.preventDefault();
+
             const file = document.getElementById("fileInput").files[0];
             const formData = new FormData();
             formData.append("file", file);
